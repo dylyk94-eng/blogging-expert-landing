@@ -1,0 +1,24 @@
+{
+  "name": "blogging-expert-landing",
+  "version": "1.0.0",
+  "description": "Лендинг эксперта по блогингу для сбора заявок в лист ожидания",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'No build needed - static HTML'",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:vercel": "vercel --prod"
+  },
+  "keywords": [
+    "landing",
+    "blogging",
+    "expert",
+    "waitlist"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^17.0.0",
+    "serve": "^14.2.0",
+    "vercel": "^34.0.0"
+  }
+}
