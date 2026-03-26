@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блогинг как актив — Лист ожидания</title>
+    <title>Елизавета Апросимова — Блогинг как актив — Лист ожидания</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header header-transparent">
         <nav class="nav">
-            <div class="logo">Эксперт по блогингу</div>
-            <a href="#cta" class="btn btn-primary btn-small">В лист ожидания</a>
+            <div class="logo">
+                <span class="logo-text">Елизавета</span>
+                <span class="logo-accent">Апросимова</span>
+            </div>
+            <a href="#cta" class="btn btn-gradient btn-small">В лист ожидания</a>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="hero">
+            <div class="hero-decoration"></div>
             <div class="container">
                 <div class="hero-content">
+                    <p class="hero-badge">🎯 Ментор по личному бренду</p>
                     <h1 class="hero-title">
                         Если чувствуешь, что время нестабильное — блог может стать твоим самым надёжным доходом.
                     </h1>
@@ -28,22 +33,26 @@
                     </p>
                     <div class="hero-cta">
                         <a href="#cta" class="btn btn-primary btn-large">Записаться в лист ожидания</a>
-                        <p class="hero-note">Первые 50 человек — с бонусами</p>
+                        <p class="hero-note">✨ Первые 50 человек — с бонусами</p>
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="hero-card">
-                        <div class="card-stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">учеников</span>
+                    <div class="hero-image-wrapper">
+                        <img src="IMG_1744.JPG" alt="Елизавета Апросимова" class="hero-photo">
+                        <div class="hero-image-accent"></div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <div class="hero-stat-number">500+</div>
+                            <div class="hero-stat-label">учеников</div>
                         </div>
-                        <div class="card-stat">
-                            <span class="stat-number">₽1.5M+</span>
-                            <span class="stat-label">заработали ученики</span>
+                        <div class="hero-stat-item">
+                            <div class="hero-stat-number">₽1.5M+</div>
+                            <div class="hero-stat-label">заработали ученики</div>
                         </div>
-                        <div class="card-stat">
-                            <span class="stat-number">3 года</span>
-                            <span class="stat-label">практики</span>
+                        <div class="hero-stat-item">
+                            <div class="hero-stat-number">3 года</div>
+                            <div class="hero-stat-label">практики</div>
                         </div>
                     </div>
                 </div>
@@ -142,16 +151,18 @@
                 <div class="author-content">
                     <div class="author-visual">
                         <div class="author-avatar">
-                            <div class="avatar-placeholder">👤</div>
+                            <img src="IMG_1744.JPG" alt="Елизавета Апросимова" class="author-photo">
                         </div>
                         <div class="author-socials">
+                            <a href="https://www.instagram.com/evenkiyka" class="social-link" target="_blank">Instagram</a>
                             <a href="#" class="social-link">Telegram</a>
-                            <a href="#" class="social-link">Instagram</a>
                             <a href="#" class="social-link">YouTube</a>
                         </div>
                     </div>
                     <div class="author-info">
                         <h2 class="section-title">Об авторе</h2>
+                        <p class="author-name">Елизавета Апросимова</p>
+                        <p class="author-title">Ментор по личному бренду • Блогер • Предприниматель</p>
                         <p class="author-mission">
                             Помогаю экспертам и новичкам выстраивать блог как актив и источник стабильного дохода.
                         </p>
@@ -159,7 +170,7 @@
                             За 3 года работы с блогерами я увидел один паттерн: кто выстраивает системный подход — зарабатывает стабильно. Кто прыгает от идеи к идее — устает и бросает.
                         </p>
                         <p class="author-text">
-                            Я создал методику, которая работает в любой нише. Не важен опыт — важно желание и готовность действовать.
+                            Я создала методику, которая работает в любой нише. Не важен опыт — важно желание и готовность действовать.
                         </p>
                         <div class="author-stats">
                             <div class="stat-item">
@@ -241,16 +252,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">Эксперт по блогингу</div>
-                    <p class="footer-tagline">Блогинг как актив</p>
+                    <div class="footer-logo">Елизавета Апросимова</div>
+                    <p class="footer-tagline">Ментор по личному бренду</p>
                 </div>
                 <div class="footer-links">
+                    <a href="https://www.instagram.com/evenkiyka" target="_blank">Instagram</a>
                     <a href="#">Telegram</a>
-                    <a href="#">Instagram</a>
                     <a href="#">YouTube</a>
                 </div>
             </div>
-            <p class="footer-copyright">© 2026 Все права защищены</p>
+            <p class="footer-copyright">© 2026 Елизавета Апросимова. Все права защищены.</p>
         </div>
     </footer>
 
@@ -286,6 +297,24 @@
                     });
                 }
             });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                header.classList.remove('header-transparent');
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.add('header-transparent');
+                header.classList.remove('header-scrolled');
+            }
+
+            lastScroll = currentScroll;
         });
 
         // Animate on scroll
